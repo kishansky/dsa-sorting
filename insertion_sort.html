@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion Sorting</title>
+    <script>
+        let data = [40,30,12,25,7,89,45,78,9];
+
+        function insertionSort(item){
+            let i,current,j;
+            for(i=1;i< item.length;i++){
+                current=item[i];
+                j=i-1;
+                while(j>=0 && item[j]>current){
+                    item[j+1]=item[j];
+                    j--;
+                }
+                data[j+1]=current;
+            }
+        }
+
+        insertionSort(data);
+        console.log(data);
+    </script>
+</head>
+<body>
+    <h1>Insertion Sorting</h1>
+
+</body>
+</html> 
